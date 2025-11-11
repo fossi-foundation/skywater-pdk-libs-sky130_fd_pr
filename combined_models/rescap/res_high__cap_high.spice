@@ -10,6 +10,7 @@
 + tol_m3 = -0.0455u
 + tol_m4 = -0.0455u
 + tol_m5 = -0.119u
++ tol_rdl = -0.0329u
 .param
 + rcn=296.1
 + rcp=789
@@ -25,12 +26,14 @@
 + rm3=0.0533
 + rm4=0.0533
 + rm5=0.03361
++ rrdl=0.00633
 + rcp1=213.88
 + rcl1=18.61
 + rcvia=11.85
 + rcvia2=6.623
 + rcvia3=6.623
 + rcvia4=0.7377
++ rcrdlcon=0.00792
 + rspwres=4120
 * P+ Poly Preres Parameters
 .include "sky130_fd_pr__model__res.model.spice"

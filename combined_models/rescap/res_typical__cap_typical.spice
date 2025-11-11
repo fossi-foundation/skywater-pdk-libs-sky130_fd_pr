@@ -10,6 +10,7 @@
 + tol_m3 = 0.0
 + tol_m4 = 0.0
 + tol_m5 = 0.0
++ tol_rdl = 0.0
 .param
 + rcn=182
 + rcp=600
@@ -25,12 +26,14 @@
 + rm3=0.047
 + rm4=0.047
 + rm5=0.0285
++ rrdl=0.005
 + rcp1=145.28
 + rcl1=9.3
 + rcvia=4.5
 + rcvia2=3.41
 + rcvia3=3.41
 + rcvia4=0.38
++ rcrdlcon=0.0058
 + rspwres=3816
 * P+ Poly Preres Parameters
 .param
