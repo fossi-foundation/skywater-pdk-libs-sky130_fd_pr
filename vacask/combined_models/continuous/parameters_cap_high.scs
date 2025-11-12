@@ -1,0 +1,5 @@
+parameters sw_fox_cap=1.0 + corner_factor * 0.18999999999999995 + process_mc_factor * mc_pr_switch * 0
+parameters sw_fox_poly_cap=1.0 + corner_factor * 0.18999999999999995 + process_mc_factor * mc_pr_switch * 0
+parameters sw_li_cap=1.0 + corner_factor * 1.5499999999999998 + process_mc_factor * mc_pr_switch * exp(0)
+parameters sw_cap_mim_ca=2e-15 + corner_factor * 2.299999999999998e-16 + process_mc_factor * mc_pr_switch * 0
+parameters sw_cap_mim_dw=1.5e-07 + corner_factor * 9.499999999999999e-08 + process_mc_factor * mc_pr_switch * 0

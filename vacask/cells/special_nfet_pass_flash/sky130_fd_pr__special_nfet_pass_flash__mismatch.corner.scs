@@ -1,0 +1,6 @@
+parameters sky130_fd_pr__special_nfet_pass_flash__tox_slope=6.589e-03
+parameters sky130_fd_pr__special_nfet_pass_flash__lint_slope=0.0
+parameters sky130_fd_pr__special_nfet_pass_flash__wint_slope=0.0
+parameters sky130_fd_pr__special_nfet_pass_flash__vth0_slope=1.0889e-2
+parameters sky130_fd_pr__special_nfet_pass_flash__voff_slope=0.0
+parameters sky130_fd_pr__special_nfet_pass_flash__nfactor_slope=0.0
