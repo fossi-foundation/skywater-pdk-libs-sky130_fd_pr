@@ -1,0 +1,59 @@
+parameters wminp1=0.15u wminl1=0.14u wminm1=0.14u wminm2=0.14u wminm3=0.3u wminm4=0.3u wminm5=0.8u wminrdl=10.0u
+model m_mcp1f sp_capacitor tc1=0 tc2=0 cox=cp1f capsw=cp1fsw w=wminp1 tnom=25
+model m_mcl1f sp_capacitor tc1=0 tc2=0 cox=cl1f capsw=cl1fsw w=wminl1 tnom=25
+model m_mcl1d sp_capacitor tc1=0 tc2=0 cox=cl1d capsw=cl1dsw w=wminl1 tnom=25
+model m_mcl1p1 sp_capacitor tc1=0 tc2=0 cox=cl1p1 capsw=cl1p1sw w=wminl1 tnom=25
+model m_mcm1f sp_capacitor tc1=0 tc2=0 cox=cm1f capsw=cm1fsw w=wminm1 tnom=25
+model m_mcm1d sp_capacitor tc1=0 tc2=0 cox=cm1d capsw=cm1dsw w=wminm1 tnom=25
+model m_mcm1p1 sp_capacitor tc1=0 tc2=0 cox=cm1p1 capsw=cm1p1sw w=wminm1 tnom=25
+model m_mcm1l1 sp_capacitor tc1=0 tc2=0 cox=cm1l1 capsw=cm1l1sw w=wminm1 tnom=25
+model m_mcm2f sp_capacitor tc1=0 tc2=0 cox=cm2f capsw=cm2fsw w=wminm2 tnom=25
+model m_mcm2d sp_capacitor tc1=0 tc2=0 cox=cm2d capsw=cm2dsw w=wminm2 tnom=25
+model m_mcm2p1 sp_capacitor tc1=0 tc2=0 cox=cm2p1 capsw=cm2p1sw w=wminm2 tnom=25
+model m_mcm2l1 sp_capacitor tc1=0 tc2=0 cox=cm2l1 capsw=cm2l1sw w=wminm2 tnom=25
+model m_mcm2m1 sp_capacitor tc1=0 tc2=0 cox=cm2m1 capsw=cm2m1sw w=wminm2 tnom=25
+model m_mcm3f sp_capacitor tc1=0 tc2=0 cox=cm3f capsw=cm3fsw w=wminm3 tnom=25
+model m_mcm3d sp_capacitor tc1=0 tc2=0 cox=cm3d capsw=cm3dsw w=wminm3 tnom=25
+model m_mcm3p1 sp_capacitor tc1=0 tc2=0 cox=cm3p1 capsw=cm3p1sw w=wminm3 tnom=25
+model m_mcm3l1 sp_capacitor tc1=0 tc2=0 cox=cm3l1 capsw=cm3l1sw w=wminm3 tnom=25
+model m_mcm3m1 sp_capacitor tc1=0 tc2=0 cox=cm3m1 capsw=cm3m1sw w=wminm3 tnom=25
+model m_mcm3m2 sp_capacitor tc1=0 tc2=0 cox=cm3m2 capsw=cm3m2sw w=wminm3 tnom=25
+model m_mcm4f sp_capacitor tc1=0 tc2=0 cox=cm4f capsw=cm4fsw w=wminm4 tnom=25
+model m_mcm4d sp_capacitor tc1=0 tc2=0 cox=cm4d capsw=cm4dsw w=wminm4 tnom=25
+model m_mcm4p1 sp_capacitor tc1=0 tc2=0 cox=cm4p1 capsw=cm4p1sw w=wminm4 tnom=25
+model m_mcm4l1 sp_capacitor tc1=0 tc2=0 cox=cm4l1 capsw=cm4l1sw w=wminm4 tnom=25
+model m_mcm4m1 sp_capacitor tc1=0 tc2=0 cox=cm4m1 capsw=cm4m1sw w=wminm4 tnom=25
+model m_mcm4m2 sp_capacitor tc1=0 tc2=0 cox=cm4m2 capsw=cm4m2sw w=wminm4 tnom=25
+model m_mcm4m3 sp_capacitor tc1=0 tc2=0 cox=cm4m3 capsw=cm4m3sw w=wminm4 tnom=25
+model m_mcm5f sp_capacitor tc1=0 tc2=0 cox=cm5f capsw=cm5fsw w=wminm5 tnom=25
+model m_mcm5d sp_capacitor tc1=0 tc2=0 cox=cm5d capsw=cm5dsw w=wminm5 tnom=25
+model m_mcm5p1 sp_capacitor tc1=0 tc2=0 cox=cm5p1 capsw=cm5p1sw w=wminm5 tnom=25
+model m_mcm5l1 sp_capacitor tc1=0 tc2=0 cox=cm5l1 capsw=cm5l1sw w=wminm5 tnom=25
+model m_mcm5m1 sp_capacitor tc1=0 tc2=0 cox=cm5m1 capsw=cm5m1sw w=wminm5 tnom=25
+model m_mcm5m2 sp_capacitor tc1=0 tc2=0 cox=cm5m2 capsw=cm5m2sw w=wminm5 tnom=25
+model m_mcm5m3 sp_capacitor tc1=0 tc2=0 cox=cm5m3 capsw=cm5m3sw w=wminm5 tnom=25
+model m_mcm5m4 sp_capacitor tc1=0 tc2=0 cox=cm5m4 capsw=cm5m4sw w=wminm5 tnom=25
+model m_mcrdlf sp_capacitor tc1=0 tc2=0 cox=crdlf capsw=crdlfsw w=wminrdl tnom=25
+model m_mcrdld sp_capacitor tc1=0 tc2=0 cox=crdld capsw=crdldsw w=wminrdl tnom=25
+model m_mcrdlp1 sp_capacitor tc1=0 tc2=0 cox=crdlp1 capsw=crdlp1sw w=wminrdl tnom=25
+model m_mcrdll1 sp_capacitor tc1=0 tc2=0 cox=crdll1 capsw=crdll1sw w=wminrdl tnom=25
+model m_mcrdlm1 sp_capacitor tc1=0 tc2=0 cox=crdlm1 capsw=crdlm1sw w=wminrdl tnom=25
+model m_mcrdlm2 sp_capacitor tc1=0 tc2=0 cox=crdlm2 capsw=crdlm2sw w=wminrdl tnom=25
+model m_mcrdlm3 sp_capacitor tc1=0 tc2=0 cox=crdlm3 capsw=crdlm3sw w=wminrdl tnom=25
+model m_mcrdlm4 sp_capacitor tc1=0 tc2=0 cox=crdlm4 capsw=crdlm4sw w=wminrdl tnom=25
+model m_mcrdlm5 sp_capacitor tc1=0 tc2=0 cox=crdlm5 capsw=crdlm5sw w=wminrdl tnom=25
+subckt sky130_fd_pr__cap_mim_m3_1 (c0 c1)
+parameters mult=1 w=1 l=1
+parameters wc=w + sw_cap_mim_dw * 1e6 lc=l + sw_cap_mim_dw * 1e6 carea=sw_cap_mim_ca * wc * lc * (1 + mismatch_factor * mc_mm_switch * 0 * sw_mm_cmim / sqrt(wc * lc * mult))
+c1 (c0 c1) capacitor c=carea
+ends // sky130_fd_pr__cap_mim_m3_1
+subckt sky130_fd_pr__cap_mim_m3_2 (c0 c1)
+parameters mult=1 w=1 l=1
+parameters wc=w + sw_cap_mim_dw * 1e6 lc=l + sw_cap_mim_dw * 1e6 carea=sw_cap_mim_ca * wc * lc * (1 + mismatch_factor * mc_mm_switch * 0 * sw_mm_cmim / sqrt(wc * lc * mult))
+c1 (c0 c1) capacitor c=carea
+ends // sky130_fd_pr__cap_mim_m3_2
+subckt sky130_fd_pr__model__parasitic__cap_p2ps (r0 sub)
+parameters mult=1 w=1 l=1
+parameters crpf_precision=1.06e-04
+c0 (r0 sub) capacitor c=l * w * crpf_precision * 1e-12 * sw_fox_poly_cap
+ends // sky130_fd_pr__model__parasitic__cap_p2ps

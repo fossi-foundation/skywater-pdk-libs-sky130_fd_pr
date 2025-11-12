@@ -1,0 +1,4 @@
+parameters sky130_fd_pr__pfet_01v8_mvt__toxe_slope=2.5e-02
+parameters sky130_fd_pr__pfet_01v8_mvt__nfactor_slope=0.1
+parameters sky130_fd_pr__pfet_01v8_mvt__voff_slope=0.0
+parameters sky130_fd_pr__pfet_01v8_mvt__vth0_slope=5.0e-02

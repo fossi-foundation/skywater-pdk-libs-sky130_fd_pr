@@ -1,0 +1,8 @@
+subckt sky130_fd_pr__pfet_g5v0d16v0 (d g s b)
+parameters mult=1
+parameters nf=1 w=5 l=0.7 sa=0 sb=0 sd=0 ad=3.17 * (w + 1.72) pd=2 * (3.17 + w + 1.72) as=0.28 * w ps=2 * (0.28 + w) nrd=0.13 * nf / w nrs=0.14 * nf / w
+rldd (d d1) resistor r=(1 / w) * 8900 * (sw_sky130_fd_pr__pfet_01v8_de_rd_mult * sw_pw_rs_mc ** 3) * 1.02 tc1=2.5e-3 tc2=2.2e-6
+xdnw1 (d b) sky130_fd_pr__model__parasitic__diode_pw2dn area=ad perim=pd m=0.5
+xdnw2 (d1 b) sky130_fd_pr__model__parasitic__diode_pw2dn area=ad perim=pd m=0.5
+Xsky130_fd_pr__pfet_g5v0d16v0 (d1 g s b) sky130_fd_pr__pfet_g5v0d16v0_base l=l w=w ad=0 as=as pd=0 ps=ps nrd=nrd nrs=nrs sa=sa sb=sb sd=sd nf=nf
+ends // sky130_fd_pr__pfet_g5v0d16v0

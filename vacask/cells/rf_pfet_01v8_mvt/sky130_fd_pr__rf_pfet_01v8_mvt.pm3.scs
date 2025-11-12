@@ -1,0 +1,30 @@
+subckt sky130_fd_pr__rf_pfet_01v8_mvt_af02w1p68l0p15 (d g s b)
+parameters mult=1.0 rg_sub_tnom=(127 * sky130_fd_pr__rf_pfet_01v8_mvt__aw_rgate_stub_mult) rg_dist_tnom=(250.129 * sky130_fd_pr__rf_pfet_01v8_mvt__aw_rgate_dist_mult) tnom=30.0
+xsky130_fd_pr__rf_pfet_01v8_mvt_aF02W1p68L0p15 (1 2 3 b) sky130_fd_pr__pfet_01v8_mvt l=0.15 w=(2) * (1.68) ad=(2) * (0.2352) as=(2) * (0.445) pd=(2) * (1.96) ps=(2) * (3.89) nrd=(0) / (2) nrs=(0) / (2) nf=2 sa=0.265 sb=0.265 sd=0.28 m=1 mult=1 * mult
+cpar_ds (1 3) capacitor c=(0.56f * sky130_fd_pr__rf_pfet_01v8_mvt__aw_cap_mult)
+cpar_gd (2 1) capacitor c=(0.34f * sky130_fd_pr__rf_pfet_01v8_mvt__aw_cap_mult)
+cpar_gs (2 3) capacitor c=(0.119f * sky130_fd_pr__rf_pfet_01v8_mvt__aw_cap_mult)
+rg (2 g) resistor r=(rg_sub_tnom * (1 + (temper - tref) * tc1rcgp + (temper - tref) * (temper - tref) * tc2rcgp)) + (rg_dist_tnom * (1 + (temper - tref) * tc1rsgpu + (temper - tref) * (temper - tref) * tc2rsgpu))
+rd (1 d) resistor r=(154 * sky130_fd_pr__rf_pfet_01v8_mvt__aw_rd_mult)
+rs (3 s) resistor r=(76 * sky130_fd_pr__rf_pfet_01v8_mvt__aw_rs_mult)
+ends // sky130_fd_pr__rf_pfet_01v8_mvt_af02w1p68l0p15
+subckt sky130_fd_pr__rf_pfet_01v8_mvt_af02w0p84l0p15 (d g s b)
+parameters mult=1.0 rg_stub_tnom=(127 * sky130_fd_pr__rf_pfet_01v8_mvt__aw_rgate_stub_mult_2) rg_dist_tnom=(257.3 * sky130_fd_pr__rf_pfet_01v8_mvt__aw_rgate_dist_mult_2) tnom=30.0
+xsky130_fd_pr__rf_pfet_01v8_mvt_aF02W0p84L0p15 (1 2 3 b) sky130_fd_pr__pfet_01v8_mvt l=0.15 w=(2) * (0.84) ad=(2) * (0.1176) as=(2) * (0.223) pd=(2) * (1.12) ps=(2) * (2.21) nrd=(0) / (2) nrs=(0) / (2) nf=2 sa=0.265 sb=0.265 sd=0.28 m=1 mult=1 * mult
+cpar_ds (1 3) capacitor c=(0.17f * sky130_fd_pr__rf_pfet_01v8_mvt__aw_cap_mult)
+cpar_gd (2 1) capacitor c=(0.300f * sky130_fd_pr__rf_pfet_01v8_mvt__aw_cap_mult)
+cpar_gs (2 3) capacitor c=(0.100f * sky130_fd_pr__rf_pfet_01v8_mvt__aw_cap_mult)
+rg (2 g) resistor r=(rg_stub_tnom * (1 + (temper - tref) * tc1rcgp + (temper - tref) * (temper - tref) * tc2rcgp)) + (rg_dist_tnom * (1 + (temper - tref) * tc1rsgpu + (temper - tref) * (temper - tref) * tc2rsgpu))
+rd (1 d) resistor r=(306 * sky130_fd_pr__rf_pfet_01v8_mvt__aw_rd_mult)
+rs (3 s) resistor r=(152.5 * sky130_fd_pr__rf_pfet_01v8_mvt__aw_rs_mult)
+ends // sky130_fd_pr__rf_pfet_01v8_mvt_af02w0p84l0p15
+subckt sky130_fd_pr__rf_pfet_01v8_mvt_af04w1p68l0p15 (d g s b)
+parameters mult=1.0 rg_stub_tnom=(88.5 * sky130_fd_pr__rf_pfet_01v8_mvt__aw_rgate_stub_mult) rg_dist_tnom=(100.061 * sky130_fd_pr__rf_pfet_01v8_mvt__aw_rgate_dist_mult) tnom=30.0
+xsky130_fd_pr__rf_pfet_01v8_mvt_aF04W1p68L0p15 (1 2 3 b) sky130_fd_pr__pfet_01v8_mvt l=0.15 w=(4) * (1.68) ad=(4) * (0.2352) as=(4) * (0.34) pd=(4) * (1.96) ps=(4) * (2.925) nrd=(0) / (4) nrs=(0) / (4) nf=4 sa=0.265 sb=0.265 sd=0.28 m=1 mult=1 * mult
+cpar_ds (1 3) capacitor c=(0.82f * sky130_fd_pr__rf_pfet_01v8_mvt__aw_cap_mult)
+cpar_gd (2 1) capacitor c=(0.984f * sky130_fd_pr__rf_pfet_01v8_mvt__aw_cap_mult)
+cpar_gs (2 3) capacitor c=(0.354f * sky130_fd_pr__rf_pfet_01v8_mvt__aw_cap_mult)
+rg (2 g) resistor r=(rg_stub_tnom * (1 + (temper - tref) * tc1rcgp + (temper - tref) * (temper - tref) * tc2rcgp)) + (rg_dist_tnom * (1 + (temper - tref) * tc1rsgpu + (temper - tref) * (temper - tref) * tc2rsgpu))
+rd (1 d) resistor r=(78 * sky130_fd_pr__rf_pfet_01v8_mvt__aw_rd_mult)
+rs (3 s) resistor r=(50.6 * sky130_fd_pr__rf_pfet_01v8_mvt__aw_rs_mult)
+ends // sky130_fd_pr__rf_pfet_01v8_mvt_af04w1p68l0p15

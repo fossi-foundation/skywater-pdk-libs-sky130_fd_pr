@@ -1,0 +1,2 @@
+parameters sky130_fd_bs_flash__special_sonosfet_original__tox_slope=5e-3
+parameters sky130_fd_bs_flash__special_sonosfet_original__vth0_slope=0.026
