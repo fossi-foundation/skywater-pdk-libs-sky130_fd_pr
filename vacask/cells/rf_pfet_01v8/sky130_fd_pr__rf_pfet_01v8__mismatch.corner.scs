@@ -1,0 +1,16 @@
+parameters sky130_fd_pr__rf_pfet_01v8__toxe_slope=1.267e-02
+parameters sky130_fd_pr__rf_pfet_01v8__toxe1_slope=1.067e-02
+parameters sky130_fd_pr__rf_pfet_01v8__toxe2_slope=1.167e-02
+parameters sky130_fd_pr__rf_pfet_01v8__toxe3_slope=1.367e-02
+parameters sky130_fd_pr__rf_pfet_01v8__toxe4_slope=1.467e-02
+parameters sky130_fd_pr__rf_pfet_01v8__toxe5_slope=1.567e-02
+parameters sky130_fd_pr__rf_pfet_01v8__nfactor_slope=0.429
+parameters sky130_fd_pr__rf_pfet_01v8__nfactor1_slope=0.0
+parameters sky130_fd_pr__rf_pfet_01v8__b_toxe_slope=6.443e-03
+parameters sky130_fd_pr__rf_pfet_01v8__b_toxe_slope1=4.443e-03
+parameters sky130_fd_pr__rf_pfet_01v8__b_nfactor_slope1=0.1
+parameters sky130_fd_pr__rf_pfet_01v8__b_voff_slope=0.014
+parameters sky130_fd_pr__rf_pfet_01v8__b_voff_slope1=0.009
+parameters sky130_fd_pr__rf_pfet_01v8__b_vth0_slope1=7.356e-03
+parameters sky130_fd_pr__rf_pfet_01v8__b_vth0_slope2=9.356e-03
+parameters sky130_fd_pr__rf_pfet_01v8__b_vth0_slope3=8.356e-03

@@ -1,0 +1,7 @@
+parameters sky130_fd_pr__special_nfet_01v8__toxe_slope=3.443e-03
+parameters sky130_fd_pr__special_nfet_01v8__lint_slope=0.0
+parameters sky130_fd_pr__special_nfet_01v8__nfactor_slope=0.0
+parameters sky130_fd_pr__special_nfet_01v8__voff_slope=0.007
+parameters sky130_fd_pr__special_nfet_01v8__vth0_slope=3.356e-03
+parameters sky130_fd_pr__special_nfet_01v8__vth0_slope1=7.356e-03
+parameters sky130_fd_pr__special_nfet_01v8__wint_slope=0

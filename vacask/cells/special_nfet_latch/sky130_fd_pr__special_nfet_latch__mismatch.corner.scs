@@ -1,0 +1,6 @@
+parameters sky130_fd_pr__special_nfet_latch__tox_slope=5.989e-03
+parameters sky130_fd_pr__special_nfet_latch__vth0_slope=5.289e-03
+parameters sky130_fd_pr__special_nfet_latch__lint_slope=0
+parameters sky130_fd_pr__special_nfet_latch__wint_slope=0
+parameters sky130_fd_pr__special_nfet_latch__nfactor_slope=0.0
+parameters sky130_fd_pr__special_nfet_latch__voff_slope=0.00

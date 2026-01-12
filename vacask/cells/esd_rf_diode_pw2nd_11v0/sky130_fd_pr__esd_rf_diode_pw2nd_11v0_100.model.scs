@@ -1,0 +1,5 @@
+subckt sky130_fd_pr__esd_rf_diode_pw2nd_11v0_100 (c0 c1)
+parameters area=-1 perim=-1.0
+resd_ndiode_h_100 (c0 a1) resistor r=1.1101
+d1 (a1 c1) m_sky130_fd_pr__diode_pw2nd_11v0__no_rs area=area * 1.54
+ends // sky130_fd_pr__esd_rf_diode_pw2nd_11v0_100

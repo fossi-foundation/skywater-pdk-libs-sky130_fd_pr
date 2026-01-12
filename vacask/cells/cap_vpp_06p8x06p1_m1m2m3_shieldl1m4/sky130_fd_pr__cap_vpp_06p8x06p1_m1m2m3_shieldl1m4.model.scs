@@ -1,0 +1,19 @@
+subckt sky130_fd_pr__cap_vpp_06p8x06p1_m1m2m3_shieldl1m4 (c0 c1 b m4)
+parameters mult=1.0 ctot_a=26.560e-15 * sky130_fd_pr__cap_vpp_06p8x06p1_l1m1m2_noshield__cor + 0.0283 / sqrt(6.1 * 6.8 * mult * 2) * 26.560e-15 * sky130_fd_pr__cap_vpp_06p8x06p1_l1m1m2_noshield__cor * mc_mm_switch * 0 cm4_c0=2.74e-15 * c0m4m3_vpp cm4_c1=1.53e-15 * c1m4m3_vpp cli2s=(3.00e-15 - 3.26e-16) * cli2s_vpp rat_m3=0.160 rat_m2=0.394 rat_m1=0.404 rat_m12li=0.042 cap_m3=rat_m3 * ctot_a cap_m2=rat_m2 * ctot_a cap_m1=rat_m1 * ctot_a cap_m12li=rat_m12li * ctot_a lm1=2.42 lm2=2.77 lm3=2.25 wm1=0.140 wm2=0.140 wm3=0.300 nfm1=42.0 nfm2=38.0 nfm3=22.0 nvia2_c0=48.0 nvia2_c1=23.0 nvia_c0=60.0 nvia_c1=32.0 nmcon=64.0
+ccmvpp6p8x6p1_lim4shield (m4 c0) capacitor c=cm4_c0
+cm4_1 (m4 c1) capacitor c=cm4_c1
+rm31 (c0 z1) resistor r=rm3 * lm3 / wm3 * (1 / 3) * (1 / nfm3)
+cm3 (z1 c1) capacitor c=cap_m3
+rvia2_1 (c0 d0) resistor r=rcvia2 / nvia2_c0
+rvia2_2 (c1 d1) resistor r=rcvia2 / nvia2_c1
+rm21 (d0 a1) resistor r=rm2 * lm2 / wm2 * (1 / 3) * (1 / nfm2)
+cm2 (a1 d1) capacitor c=cap_m2
+rvia1 (d0 e0) resistor r=rcvia / nvia_c0
+rvia2 (d1 e1) resistor r=rcvia / nvia_c1
+rm11 (e0 b1) resistor r=rm1 * lm1 / wm1 * (1 / 3) * (1 / nfm1)
+cm1 (b1 e1) capacitor c=cap_m1
+rmcon (e0 f0) resistor r=rcl1 / nmcon
+rliw (f0 g0) resistor r=rl1
+cli2b (g0 b) capacitor c=cli2s
+cm12li (e1 g0) capacitor c=cap_m12li
+ends // sky130_fd_pr__cap_vpp_06p8x06p1_m1m2m3_shieldl1m4

@@ -1,0 +1,8 @@
+include "../../cells/special_nfet_01v8/sky130_fd_pr__special_nfet_01v8__fs.pm3.scs"
+include "../../cells/special_nfet_01v8/sky130_fd_pr__special_nfet_01v8__mismatch.corner.scs"
+include "../../cells/special_pfet_01v8_hvt/sky130_fd_pr__special_pfet_01v8_hvt__fs.pm3.scs"
+include "../../cells/special_pfet_01v8_hvt/sky130_fd_pr__special_pfet_01v8_hvt__mismatch.corner.scs"
+include "all.scs"
+include "fs/legacy.scs"
+include "fs/nonfet.scs"
+include "fs/rf.scs"
