@@ -102,20 +102,50 @@
 
 *  Independent arameters used to Monte Carlo only (*_mc)
 *  The remaining parameters are used both Corners and MC.
+* Process Monte Carlo:  For each process parameter X, X_mcz is a random
+* draw (standard normal), which ngspice evaluates again at every place it
+* is used.  X_mcd = X_mcz is evaluated only once, so that all devices
+* share the same process value (one draw per die per simulation run).
+.param sw_tox_lv_mc_mcz = 'agauss(0,1,1)'
+.param sw_tox_lv_mc_mcd = 'sw_tox_lv_mc_mcz'
+.param sw_tox_hv_mc_mcz = 'agauss(0,1,1)'
+.param sw_tox_hv_mc_mcd = 'sw_tox_hv_mc_mcz'
+.param sw_vth0_sky130_fd_pr__nfet_01v8_lvt_mc_mcz = 'agauss(0,1,1)'
+.param sw_vth0_sky130_fd_pr__nfet_01v8_lvt_mc_mcd = 'sw_vth0_sky130_fd_pr__nfet_01v8_lvt_mc_mcz'
+.param sw_pw_rs_mc_mcz = 'agauss(0,1,1)'
+.param sw_pw_rs_mc_mcd = 'sw_pw_rs_mc_mcz'
+.param sw_vth0_sky130_fd_pr__nfet_01v8_mc_mcz = 'agauss(0,1,1)'
+.param sw_vth0_sky130_fd_pr__nfet_01v8_mc_mcd = 'sw_vth0_sky130_fd_pr__nfet_01v8_mc_mcz'
+.param sw_vth0_sky130_fd_pr__pfet_01v8_lvt_mc_mcz = 'agauss(0,1,1)'
+.param sw_vth0_sky130_fd_pr__pfet_01v8_lvt_mc_mcd = 'sw_vth0_sky130_fd_pr__pfet_01v8_lvt_mc_mcz'
+.param sw_vth0_sky130_fd_pr__pfet_01v8_hvt_mc_mcz = 'agauss(0,1,1)'
+.param sw_vth0_sky130_fd_pr__pfet_01v8_hvt_mc_mcd = 'sw_vth0_sky130_fd_pr__pfet_01v8_hvt_mc_mcz'
+.param sw_vth0_sky130_fd_pr__pfet_01v8_mc_mcz = 'agauss(0,1,1)'
+.param sw_vth0_sky130_fd_pr__pfet_01v8_mc_mcd = 'sw_vth0_sky130_fd_pr__pfet_01v8_mc_mcz'
+.param sw_vth0_sky130_fd_pr__nfet_01v8_nat_mc_mcz = 'agauss(0,1,1)'
+.param sw_vth0_sky130_fd_pr__nfet_01v8_nat_mc_mcd = 'sw_vth0_sky130_fd_pr__nfet_01v8_nat_mc_mcz'
+.param sw_vth0_sky130_fd_pr__nfet_g5v0d10v5_mc_mcz = 'agauss(0,1,1)'
+.param sw_vth0_sky130_fd_pr__nfet_g5v0d10v5_mc_mcd = 'sw_vth0_sky130_fd_pr__nfet_g5v0d10v5_mc_mcz'
+.param sw_vth0_sky130_fd_pr__pfet_g5v0d10v5_mc_mcz = 'agauss(0,1,1)'
+.param sw_vth0_sky130_fd_pr__pfet_g5v0d10v5_mc_mcd = 'sw_vth0_sky130_fd_pr__pfet_g5v0d10v5_mc_mcz'
+.param sw_vth0_sky130_fd_pr__nfet_g5v0d16v0_mc_mcz = 'agauss(0,1,1)'
+.param sw_vth0_sky130_fd_pr__nfet_g5v0d16v0_mc_mcd = 'sw_vth0_sky130_fd_pr__nfet_g5v0d16v0_mc_mcz'
+.param sw_vth0_sky130_fd_pr__pfet_g5v0d16v0_mc_mcz = 'agauss(0,1,1)'
+.param sw_vth0_sky130_fd_pr__pfet_g5v0d16v0_mc_mcd = 'sw_vth0_sky130_fd_pr__pfet_g5v0d16v0_mc_mcz'
 .param
-+ sw_tox_lv_mc = 0
-+ sw_tox_hv_mc = 0
-+ sw_vth0_sky130_fd_pr__nfet_01v8_lvt_mc = 0
-+ sw_pw_rs_mc = 1
-+ sw_vth0_sky130_fd_pr__nfet_01v8_mc = 0
-+ sw_vth0_sky130_fd_pr__pfet_01v8_lvt_mc = 0
-+ sw_vth0_sky130_fd_pr__pfet_01v8_hvt_mc = 0
-+ sw_vth0_sky130_fd_pr__pfet_01v8_mc = 0
-+ sw_vth0_sky130_fd_pr__nfet_01v8_nat_mc = 0
-+ sw_vth0_sky130_fd_pr__nfet_g5v0d10v5_mc = 0
-+ sw_vth0_sky130_fd_pr__pfet_g5v0d10v5_mc = 0
-+ sw_vth0_sky130_fd_pr__nfet_g5v0d16v0_mc = 0
-+ sw_vth0_sky130_fd_pr__pfet_g5v0d16v0_mc = 0
++ sw_tox_lv_mc = {0+process_mc_factor*MC_PR_SWITCH*3.75e-11*sw_tox_lv_mc_mcd}
++ sw_tox_hv_mc = {0+process_mc_factor*MC_PR_SWITCH*1.25e-10*sw_tox_hv_mc_mcd}
++ sw_vth0_sky130_fd_pr__nfet_01v8_lvt_mc = {0+process_mc_factor*MC_PR_SWITCH*0.006*sw_vth0_sky130_fd_pr__nfet_01v8_lvt_mc_mcd}
++ sw_pw_rs_mc = {1*(1+process_mc_factor*MC_PR_SWITCH*0.066*sw_pw_rs_mc_mcd)}
++ sw_vth0_sky130_fd_pr__nfet_01v8_mc = {0+process_mc_factor*MC_PR_SWITCH*0.006*sw_vth0_sky130_fd_pr__nfet_01v8_mc_mcd}
++ sw_vth0_sky130_fd_pr__pfet_01v8_lvt_mc = {0+process_mc_factor*MC_PR_SWITCH*0.023*sw_vth0_sky130_fd_pr__pfet_01v8_lvt_mc_mcd}
++ sw_vth0_sky130_fd_pr__pfet_01v8_hvt_mc = {0+process_mc_factor*MC_PR_SWITCH*0.009*sw_vth0_sky130_fd_pr__pfet_01v8_hvt_mc_mcd}
++ sw_vth0_sky130_fd_pr__pfet_01v8_mc = {0+process_mc_factor*MC_PR_SWITCH*0.009*sw_vth0_sky130_fd_pr__pfet_01v8_mc_mcd}
++ sw_vth0_sky130_fd_pr__nfet_01v8_nat_mc = {0+process_mc_factor*MC_PR_SWITCH*0.006*sw_vth0_sky130_fd_pr__nfet_01v8_nat_mc_mcd}
++ sw_vth0_sky130_fd_pr__nfet_g5v0d10v5_mc = {0+process_mc_factor*MC_PR_SWITCH*0.01*sw_vth0_sky130_fd_pr__nfet_g5v0d10v5_mc_mcd}
++ sw_vth0_sky130_fd_pr__pfet_g5v0d10v5_mc = {0+process_mc_factor*MC_PR_SWITCH*0.02*sw_vth0_sky130_fd_pr__pfet_g5v0d10v5_mc_mcd}
++ sw_vth0_sky130_fd_pr__nfet_g5v0d16v0_mc = {0+process_mc_factor*MC_PR_SWITCH*0.035*sw_vth0_sky130_fd_pr__nfet_g5v0d16v0_mc_mcd}
++ sw_vth0_sky130_fd_pr__pfet_g5v0d16v0_mc = {0+process_mc_factor*MC_PR_SWITCH*0.03*sw_vth0_sky130_fd_pr__pfet_g5v0d16v0_mc_mcd}
 *  ----------------------------
 
 
