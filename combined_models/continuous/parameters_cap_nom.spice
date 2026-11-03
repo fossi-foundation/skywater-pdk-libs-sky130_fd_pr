@@ -14,8 +14,22 @@
 *
 * ./parameters_cap_nom.spice created from ./parameters.spice
 *
-.param sw_fox_cap = {1.0+corner_factor*0.0} + process_mc_factor*MC_PR_SWITCH*AGAUSS(0,0.0475,1)
-.param sw_fox_poly_cap = {1.0+corner_factor*0.0} + process_mc_factor*MC_PR_SWITCH*AGAUSS(0,0.0475,1)
-.param sw_li_cap = {1.0+corner_factor*0.0} + process_mc_factor*MC_PR_SWITCH*EXP(AGAUSS(0,0.1,1))
-.param sw_cap_mim_ca = {2e-15+corner_factor*0.0} + process_mc_factor*MC_PR_SWITCH*GAUSS(0,0.027000000000000003,1)
-.param sw_cap_mim_dw = {1.5e-07+corner_factor*0.0} + process_mc_factor*MC_PR_SWITCH*AGAUSS(0,2.4e-08,1)
+* Process Monte Carlo:  For each process parameter X, X_mcz is a random
+* draw (standard normal), which ngspice evaluates again at every place it
+* is used.  X_mcd = X_mcz is evaluated only once, so that all devices
+* share the same process value (one draw per die per simulation run).
+.param sw_fox_cap_mcz = 'agauss(0,1,1)'
+.param sw_fox_cap_mcd = 'sw_fox_cap_mcz'
+.param sw_fox_cap = {1.0+corner_factor*0.0+process_mc_factor*MC_PR_SWITCH*0.0475*sw_fox_cap_mcd}
+.param sw_fox_poly_cap_mcz = 'agauss(0,1,1)'
+.param sw_fox_poly_cap_mcd = 'sw_fox_poly_cap_mcz'
+.param sw_fox_poly_cap = {1.0+corner_factor*0.0+process_mc_factor*MC_PR_SWITCH*0.0475*sw_fox_poly_cap_mcd}
+.param sw_li_cap_mcz = 'agauss(0,1,1)'
+.param sw_li_cap_mcd = 'sw_li_cap_mcz'
+.param sw_li_cap = {(1.0+corner_factor*0.0)*exp(process_mc_factor*MC_PR_SWITCH*0.1*sw_li_cap_mcd)}
+.param sw_cap_mim_ca_mcz = 'agauss(0,1,1)'
+.param sw_cap_mim_ca_mcd = 'sw_cap_mim_ca_mcz'
+.param sw_cap_mim_ca = {(2e-15+corner_factor*0.0)*(1+process_mc_factor*MC_PR_SWITCH*0.027*sw_cap_mim_ca_mcd)}
+.param sw_cap_mim_dw_mcz = 'agauss(0,1,1)'
+.param sw_cap_mim_dw_mcd = 'sw_cap_mim_dw_mcz'
+.param sw_cap_mim_dw = {1.5e-07+corner_factor*0.0+process_mc_factor*MC_PR_SWITCH*2.4e-08*sw_cap_mim_dw_mcd}
